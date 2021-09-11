@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .class-button {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="table table-success table-striped">
+      <tr>
+        <td>
+          <table class="table table-success table-striped">
+            <tr>
+              <td>11</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td>32</td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table class="table table-success table-striped">
+            <tr>
+              <td>11</td>
+              <td>12</td>
+              <td>
+                <button name="delete" value="{{i.id}}" class="class-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-trash-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td>22</td>
+              <td>
+                <form action="" method="POST">
+                  {% csrf_token %}
+                  <button name="delete" value="{{i.id}}" class="class-button">
+                  <i class="bi bi-trash">del</i>
+                  </button>
+                </form>
+              </td>
+              <tr></tr>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
